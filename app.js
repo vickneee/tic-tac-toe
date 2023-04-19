@@ -5,7 +5,7 @@ const startCells = [
 ];
 
 let go = "circle";
-infoDisplay.textContent = "Circle goes first";
+infoDisplay.textContent = "Circle goes first.";
 
 function createBoard() {
     startCells.forEach((_cell, index) => {
@@ -27,31 +27,6 @@ function addGo(e) {
     e.target.removeEventListener("click", addGo)
     checkScore();
 }
-//
-// function checkScore() {
-//     const allSquares = document.querySelectorAll(".square")
-//     const winningCombos = [
-//         [0,1,2], [3,4,5], [6,7,8],
-//         [0,3,6], [1,4,7], [2,5,8],
-//         [0,4,8], [2,4,6]
-//     ];
-//
-//     winningCombos.forEach(array => {
-//         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'));
-//         if (circleWins) {
-//             infoDisplay.textContent = "Circle Wins!";
-//             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
-//         } 
-//     });
-//
-//     winningCombos.forEach(array => {
-//         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('cross'));
-//         if (circleWins) {
-//             infoDisplay.textContent = "Cross Wins!";
-//             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
-//         }
-//     });
-// }
 
 function checkScore() {
     const allSquares = document.querySelectorAll(".square");
@@ -78,7 +53,7 @@ function checkScore() {
     winningCombos.forEach(array => {
         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'));
         if (circleWins) {
-            infoDisplay.textContent = "Congratulations Circle, you won! 🏆";
+            infoDisplay.textContent = "Congratulations Circle, you won! 🥳";
             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
         }
     });
@@ -86,22 +61,11 @@ function checkScore() {
     winningCombos.forEach(array => {
         const crossWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('cross'));
         if (crossWins) {
-            infoDisplay.textContent = "Congratulations Cross, you won! 🏆";
+            infoDisplay.textContent = "Congratulations Cross, you won! 🥳";
             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
         }
     });
 }
-
-// function isDraw() {
-//     const allSquares = document.querySelectorAll(".square");
-//     let draw = true;
-//     allSquares.forEach(square => {
-//         if (!square.classList.contains("circle") && !square.classList.contains("cross")) {
-//             draw = false;
-//         } 
-//     });
-//     return draw;
-// }
 
 function resetGame() {
     const allSquares = document.querySelectorAll(".square");
