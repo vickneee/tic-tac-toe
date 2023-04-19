@@ -40,14 +40,14 @@ button {
     font-weight: bold;
     border-radius: 10px;
     border: none;
-    background-color: #399d39;
+    background-color: #308630;
     color: white;
     padding: 8px 12px;
 }
 
 button:hover,
 button:active {
-    background-color: #308630;
+    background-color: #399d39;
     color: white;
     cursor: pointer;
 }
