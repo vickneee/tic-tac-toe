@@ -55,10 +55,14 @@ function checkScore() {
 
 function resetGame() {
     const allSquares = document.querySelectorAll(".square");
-    allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
-    createBoard();
-    infoDisplay.textContent = "Circle goes first";
+    allSquares.forEach(square => {
+        // Remove any child nodes from the square element
+        square.innerHTML = "";
+        // Add the click event listener back to each square
+        square.addEventListener("click", addGo);
+    });
     go = "circle";
+    infoDisplay.textContent = "Circle goes first";
 }
 
 const resetButton = document.querySelector("#reset-button");
