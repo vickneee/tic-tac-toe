@@ -53,7 +53,7 @@ function checkScore() {
     winningCombos.forEach(array => {
         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'));
         if (circleWins) {
-            infoDisplay.textContent = "Congratulations Circle, you won! 🥳";
+            infoDisplay.textContent = "Congratulations Circle, you won!";
             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
         }
     });
@@ -61,7 +61,7 @@ function checkScore() {
     winningCombos.forEach(array => {
         const crossWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('cross'));
         if (crossWins) {
-            infoDisplay.textContent = "Congratulations Cross, you won! 🥳";
+            infoDisplay.textContent = "Congratulations Cross, you won!";
             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
         }
     });
