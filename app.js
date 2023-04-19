@@ -45,7 +45,7 @@ function checkScore() {
     }
 
     if (draw) {
-        infoDisplay.textContent = "It's a Draw!";
+        infoDisplay.textContent = "It's a draw!";
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
         return;
     }
