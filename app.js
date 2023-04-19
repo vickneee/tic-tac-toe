@@ -7,7 +7,6 @@ const startCells = [
 let go = "circle";
 infoDisplay.textContent = "Circle goes first";
 
-
 function createBoard() {
     startCells.forEach((_cell, index) => {
         const cellElement = document.createElement('div');
@@ -36,8 +35,7 @@ function checkScore() {
         [0,3,6], [1,4,7], [2,5,8],
         [0,4,8], [2,4,6]
     ];
-    
-    
+
     winningCombos.forEach(array => {
         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'));
         if (circleWins) {
@@ -55,3 +53,13 @@ function checkScore() {
     });
 }
 
+function resetGame() {
+    const allSquares = document.querySelectorAll(".square");
+    allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+    createBoard();
+    infoDisplay.textContent = "Circle goes first";
+    go = "circle";
+}
+
+const resetButton = document.querySelector("#reset-button");
+resetButton.addEventListener("click", resetGame);

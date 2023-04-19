@@ -66,8 +66,8 @@ button:active {
 }
 
 .circle {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     border: 15px solid blue;
     box-sizing: border-box;
@@ -76,8 +76,8 @@ button:active {
 }
 
 .cross {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     position: relative;
 }
 
