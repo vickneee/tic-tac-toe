@@ -7,7 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
     color: #333;
-    background-color: #ece7e7;
+    background-color: #ffeca3;
 }
 
 h1 {
@@ -22,6 +22,7 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
 }
 
 .instructions {
@@ -55,8 +56,8 @@ button:active {
 #gameboard {
     width: 300px;
     height: 300px;
-    background-color: #333;
-    border: 1px solid #333;
+    background-color: #222;
+    border: 1px solid #222;
     display: flex;
     flex-wrap: wrap;
     border-radius: 18px;
@@ -66,8 +67,8 @@ button:active {
 .square {
     width: 100px;
     height: 100px;
-    background-color: #f6d6d6;
-    border: solid 2px #333;
+    background-color: #ffeca3;
+    border: solid 2px #222;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,8 +82,19 @@ button:active {
     border-radius: 50%;
     border: 15px solid blue;
     box-sizing: border-box;
-    background-color: #f6d6d6;
+    background-color: #ffeca3;
     padding: 30px;
+}
+
+.circle-1 {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+    padding: 30px;
+    position: absolute;
+    translate: -350px -100px;
 }
 
 .cross {
@@ -91,22 +103,33 @@ button:active {
     position: relative;
 }
 
+.cross-1 {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    translate: 350px 100px;
+}
+
 .cross:before,
-.cross:after {
+.cross-1:before,
+.cross:after,
+.cross-1:after {
     content: "";
     position: absolute;
     background-color: red;
     transform: rotate(45deg);
 }
 
-.cross:before {
+.cross:before,
+.cross-1:before {
     left: 50%;
     width: 30%;
     margin-left: -15%;
     height: 100%;
 }
 
-.cross:after {
+.cross:after,
+.cross-1:after {
     top: 50%;
     height: 30%;
     margin-top: -15%;
