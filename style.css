@@ -7,7 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
     color: #333;
-    background-color: #ffeca3;
+    background-color: rgba(255, 236, 163, 0.80);
 }
 
 h1 {
@@ -44,6 +44,7 @@ button {
     background-color: #308630;
     color: white;
     padding: 8px 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:hover,
@@ -62,6 +63,8 @@ button:active {
     flex-wrap: wrap;
     border-radius: 18px;
     padding: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .square {
@@ -95,6 +98,7 @@ button:active {
     padding: 30px;
     position: absolute;
     translate: -350px -100px;
+
 }
 
 .cross {
