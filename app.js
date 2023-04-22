@@ -36,19 +36,18 @@ function checkScore() {
         [0,4,8], [2,4,6]
     ];
 
-    // let draw = true;
-    // for (let i = 0; i < allSquares.length; i++) {
-    //     if (allSquares[i].childElementCount === 0) {
-    //         draw = false;
-    //         break;
-    //     }
-    // }
-    //
-    // if (draw) {
-    //     infoDisplay.textContent = "It's a draw!";
-    //     allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
-    //     return;
-    // }
+    let draw = true;
+    for (let i = 0; i < allSquares.length-1; i++) {
+        if (allSquares[i].childElementCount === 0) {
+            draw = false;
+            break;
+        }
+    }
+
+    if (draw) {
+        infoDisplay.textContent = "It's a draw!";
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+    }
 
     winningCombos.forEach(array => {
         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'));
