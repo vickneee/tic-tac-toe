@@ -37,7 +37,7 @@ function checkScore() {
     ];
 
     let draw = true;
-    for (let i = 0; i < allSquares.length-1; i++) {
+    for (let i = 0; i < allSquares.length; i++) {
         if (allSquares[i].childElementCount === 0) {
             draw = false;
             break;
