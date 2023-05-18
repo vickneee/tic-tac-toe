@@ -1,5 +1,5 @@
 # tic-tac-toe
-A simple Tic-Tac-Toe game. A message about a draw and play again button was added.
+A simple Tic-Tac-Toe game with play again button.
 
 🔗 https://vickneee.github.io/tic-tac-toe/
 
