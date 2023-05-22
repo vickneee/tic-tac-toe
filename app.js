@@ -1,3 +1,4 @@
+"use strict";
 const gameBoard = document.querySelector("#gameboard");
 const infoDisplay = document.querySelector("#info");
 const startCells = [
