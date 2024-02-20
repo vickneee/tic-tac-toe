@@ -11,4 +11,3 @@ A simple Tic-Tac-Toe game.
 - HTML
 - CSS
 - JavaScript
-
