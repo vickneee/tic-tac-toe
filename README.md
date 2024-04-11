@@ -10,7 +10,7 @@ Tic Tac Toe is a classic strategy game that has gained immense popularity in rec
 
 ## Deployment
 
-[AWS Amplify](https://main.dcegc8v6526c0.amplifyapp.com/)
+[AWS Amplify Link](https://main.dcegc8v6526c0.amplifyapp.com/)
 
 [Netlify Link](https://tic-tac-toe-vickneee.netlify.app/)
 
